@@ -76,7 +76,7 @@ Bootstrap a new JavaScript module in five minutes or less.
    then publish the initial version of the package with
    ```
    $ nvm install
-   $ npm install
+   $ yarn install
    $ npm version patch
    ```
 
@@ -131,22 +131,22 @@ $ yarn add @makenew/jsmodule
 $ git clone https://github.com/makenew/jsmodule.git
 $ cd jsmodule
 $ nvm install
-$ npm install
+$ yarn install
 ```
 
 Run each command below in a separate terminal window:
 
 ```
-$ npm run lint:watch
-$ npm run test:watch
+$ yarn run lint:watch
+$ yarn run test:watch
 ```
 
 Primary development tasks are defined under `scripts` in `package.json`
-and available via `npm run`.
+and available via `yarn run`.
 View them with
 
 ```
-$ npm run
+$ yarn run
 ```
 
 ### Source code
@@ -162,7 +162,7 @@ $ git clone git@github.com:makenew/jsmodule.git
 
 ### Requirements
 
-You will need [Node.js] with [npm] and a [Node.js debugging] client.
+You will need [Node.js] with [npm], [Yarn], and a [Node.js debugging] client.
 
 Be sure that all commands run under the correct Node version, e.g.,
 if using [nvm], install the correct version with
@@ -180,7 +180,7 @@ $ nvm use
 Install the development dependencies with
 
 ```
-$ npm install
+$ yarn install
 ```
 
 [Node.js]: https://nodejs.org/
