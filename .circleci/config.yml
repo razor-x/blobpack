@@ -129,25 +129,37 @@ workflows:
     jobs:
       - test:
           name: test-latest
+          filters:
+            <<: *version_tags
       - test:
           name: test-latest-alpine
           tag: alpine
           is_alpine: true
+          filters:
+            <<: *version_tags
       - test:
           name: test-dubnium
           tag: dubnium
+          filters:
+            <<: *version_tags
       - test:
           name: test-dubnium-alpine
           tag: dubnium-alpine
           is_alpine: true
+          filters:
+            <<: *version_tags
       - test:
           name: test-carbon
           tag: carbon
           upload_coverage: true
+          filters:
+            <<: *version_tags
       - test:
           name: test-carbon-alpine
           tag: carbon-alpine
           is_alpine: true
+          filters:
+            <<: *version_tags
       - publish:
           filters:
             branches:
