@@ -188,6 +188,13 @@ $ yarn install
 [npm]: https://www.npmjs.com/
 [nvm]: https://github.com/creationix/nvm
 
+### Publishing
+
+Use the [`npm version`][npm-version] command to release a new version.
+This will push a new git tag which will trigger a CircleCI publish job.
+
+[npm-version]: https://docs.npmjs.com/cli/version
+
 ## CircleCI
 
 _CircleCI should already be configured: this section is for reference only._
