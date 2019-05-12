@@ -4,7 +4,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/makenew/jsmodule.svg)](https://codecov.io/gh/makenew/jsmodule)
 [![CircleCI](https://img.shields.io/circleci/project/github/makenew/jsmodule.svg)](https://circleci.com/gh/makenew/jsmodule)
 
-Package skeleton for an JavaScript module.
+Package skeleton for a JavaScript module.
 
 ## Description
 
