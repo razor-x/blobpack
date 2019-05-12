@@ -1,6 +1,6 @@
 # Parts of this file were adapted from
 # GitHub’s collection of .gitignore file templates
-# which are Copyright (c) 2018 GitHub, Inc.
+# which are Copyright (c) 2019 GitHub, Inc.
 # and released under the MIT License.
 # For more details, visit the project page:
 # https://github.com/github/gitignore
@@ -34,6 +34,10 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
 pids
@@ -86,6 +90,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.test
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -105,5 +110,5 @@ typings/
 # FuseBox cache
 .fusebox/
 
-#DynamoDB Local files
+# DynamoDB Local files
 .dynamodb/
