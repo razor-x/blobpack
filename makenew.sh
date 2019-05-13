@@ -74,6 +74,7 @@ makenew () {
   find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
   find_replace "s|@makenew/jsmodule|${mk_slug}|g"
   find_replace "s|makenew/jsmodule|${mk_user}/${mk_repo}|g"
+  find_replace "s|jsmodule|${mk_repo}|g"
 
   echo
   echo 'Replacing boilerplate.'
