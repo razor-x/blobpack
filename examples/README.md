@@ -80,7 +80,6 @@ $ yarn run example:inspect:watch is-true
    in examples should be installed as devDependencies.
    The return value of the function will be logged as `data`.
    All exported functions can take options and arguments with defaults, e.g.,
-
    ```js
    /* examples/query-api.js */
    import got from 'got'
@@ -94,9 +93,7 @@ $ yarn run example:inspect:watch is-true
      return got(`${fooApi}/search/${id}`, { query })
    }
    ```
-
 2. Import and add the example to `examples/index.js`, e.g.,
-
    ```js
    /* examples/index.js */
    import queryApi from './query-api'
@@ -106,9 +103,7 @@ $ yarn run example:inspect:watch is-true
      // ...
    }
    ```
-
 3. Add any new options to this README and in `examples/index.js`, e.g.,
-
    ```js
    /* examples/index.js */
    const envVars = [
@@ -116,7 +111,6 @@ $ yarn run example:inspect:watch is-true
      // ...
    ]
    ```
-
    ````
    /* examples/README.md */
    ### Local configuration
@@ -139,7 +133,6 @@ $ yarn run example:inspect:watch is-true
 ## Adding Log Filters
 
 1. Create a new file in `examples` which exports filters, e.g.,
-
    ```js
    /* examples/filters.js */
    // Only print logs with a foo property equal to bar.
@@ -149,9 +142,7 @@ $ yarn run example:inspect:watch is-true
      onlyFooBar
    }
    ```
-
 2. Import and add filters to `examples/index.js`, e.g.,
-
    ```js
    /* examples/index.js */
    import filters from './filters'
@@ -161,6 +152,5 @@ $ yarn run example:inspect:watch is-true
      ...
    })
    ```
-
 3. Apply the filter by setting `LOG_FILTER` or `logFilter`,
    e.g., `LOG_FILTER=onlyFooBar`.
