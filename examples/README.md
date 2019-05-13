@@ -1,6 +1,6 @@
 # Examples
 
-<!--- TODO: Update all uses of is-true with added example. -->
+<!--- TODO: Update all uses of todo with added example. -->
 
 ## Running Examples Locally
 
@@ -33,19 +33,19 @@ $ yarn run example
 Run provided examples with, e.g.,
 
 ```
-$ yarn run example is-true
+$ yarn run example todo
 ```
 
 Pass arguments to examples with
 
 ```
-$ yarn run example is-true false
+$ yarn run example todo false
 ```
 
 Automatically watch and rerun an example on changes with, e.g.,
 
 ```
-$ yarn run example:watch is-true
+$ yarn run example:watch todo
 ```
 
 #### Debugging examples
@@ -53,7 +53,7 @@ $ yarn run example:watch is-true
 Debug examples with, e.g.,
 
 ```
-$ yarn run example:inspect is-true
+$ yarn run example:inspect todo
 ```
 
 For examples which run a single process and then exit,
@@ -70,7 +70,7 @@ export default ({log}) => async () => {
 Automatically watch and rerun a debuggable example on changes with, e.g.,
 
 ```
-$ yarn run example:inspect:watch is-true
+$ yarn run example:inspect:watch todo
 ```
 
 ## Writing New Examples
