@@ -60,7 +60,7 @@ makenew () {
   circleci="https://circleci.com/gh/${mk_user}/${mk_repo}"
   read -p "> Follow the CircleCI project at ${circleci} then press enter." mk_null
 
-  codecov="https://codecov.io/gh/${mk_user}${mk_repo}"
+  codecov="https://codecov.io/gh/${mk_user}/${mk_repo}"
   read -p "> Ensure the Codecov project exists at ${codecov} then press enter." mk_null
 
   sed_delete README.md '11,107d'
