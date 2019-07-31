@@ -1,6 +1,6 @@
 {
   "name": "@makenew/jsmodule",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Package skeleton for a JavaScript module.",
   "main": "dist/index.js",
   "module": "index.js",
