@@ -139,12 +139,12 @@ workflows:
           is_alpine: true
           <<: *filters
       - test:
-          name: test-dubnium
-          tag: dubnium
+          name: test-erbium
+          tag: erbium
           <<: *filters
       - test:
-          name: test-dubnium-alpine
-          tag: dubnium-alpine
+          name: test-erbium-alpine
+          tag: erbium-alpine
           is_alpine: true
           <<: *filters
       - test:
@@ -165,7 +165,7 @@ workflows:
           requires:
             - test-latest
             - test-latest-alpine
-            - test-dubnium
-            - test-dubnium-alpine
+            - test-erbium
+            - test-erbium-alpine
             - test-carbon
             - test-carbon-alpine
