@@ -108,7 +108,7 @@ jobs:
     description: Publish Node.js package
     executor:
       name: node
-      tag: carbon
+      tag: dubnium
     steps:
       - setup
       - install
@@ -148,13 +148,13 @@ workflows:
           is_alpine: true
           <<: *filters
       - test:
-          name: test-carbon
-          tag: carbon
+          name: test-dubnium
+          tag: dubnium
           upload_coverage: true
           <<: *filters
       - test:
-          name: test-carbon-alpine
-          tag: carbon-alpine
+          name: test-dubnium-alpine
+          tag: dubnium-alpine
           is_alpine: true
           <<: *filters
       - publish:
@@ -167,5 +167,5 @@ workflows:
             - test-latest-alpine
             - test-erbium
             - test-erbium-alpine
-            - test-carbon
-            - test-carbon-alpine
+            - test-dubnium
+            - test-dubnium-alpine
