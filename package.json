@@ -46,7 +46,9 @@
     "example:watch": "nodemon --exec babel-node examples",
     "example:inspect": "babel-node --inspect examples",
     "example:inspect:watch": "nodemon --exec babel-node --inspect examples",
-    "format": "standard --fix",
+    "pretty": "prettier --ignore-path .gitignore --write '**/*.(js|json|graphql)'",
+    "format": "npm-run-all --serial pretty format:*",
+    "format:js": "standard --fix",
     "report": "nyc report"
   },
   "babel": {
@@ -114,6 +116,7 @@
     "nodemon": "^2.0.1",
     "npm-run-all": "^4.1.2",
     "nyc": "^15.0.0",
+    "prettier": "^2.0.2",
     "standard": "^14.3.1"
   }
 }
