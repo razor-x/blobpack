@@ -17,6 +17,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 - Next generation JavaScript with [Babel].
 - Examples with configurable options and arguments powered by [examplr].
 - Linting with the [JavaScript Standard Style] and [JSON Lint].
+- [Prettier] code.
 - Automatically lint on changes with [gulp].
 - Futuristic debuggable unit testing with [AVA].
 - Code coverage reporting with [Istanbul], [nyc], and [Codecov].
@@ -35,6 +36,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 [JavaScript Standard Style]: https://standardjs.com/
 [Keep a CHANGELOG]: https://keepachangelog.com/
 [Node.js]: https://nodejs.org/
+[Prettier]: https://prettier.io/
 [Shields.io]: https://shields.io/
 [examplr]: https://github.com/meltwater/node-examplr
 [gulp]: https://gulpjs.com/
