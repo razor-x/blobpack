@@ -1,4 +1,4 @@
-import { todo } from '../'
+import { todo } from '../index.js'
 
 export default ({ log }) => async (check = true) => {
   log.debug({ check }, 'Input')
