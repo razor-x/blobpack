@@ -97,6 +97,10 @@
   "engines": {
     "node": ">=10.13.0"
   },
+  "resolutions": {
+    "eslint": "^7.12.1",
+    "standard": "^16.0.2"
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -117,6 +121,6 @@
     "npm-run-all": "^4.1.2",
     "nyc": "^15.0.0",
     "prettier": "^2.0.2",
-    "standard": "^14.3.1"
+    "standard": "^16.0.2"
   }
 }
