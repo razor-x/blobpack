@@ -910,10 +910,10 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
-"@meltwater/examplr@^4.2.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@meltwater/examplr/-/examplr-4.4.0.tgz#ee84910c9a8bb3bd3da08ac9488a79488231162b"
-  integrity sha512-aBT7+nkG4g+F+2XvQJbBtsrrX98G11jLMRfd+6L2S8d0I3bjreufD2TfGe1YQUr6zotP92S4kvRuiYBBeA5zzA==
+"@meltwater/examplr@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@meltwater/examplr/-/examplr-5.0.0.tgz#5536666d6602567942d1935cf73d4358e13c78a1"
+  integrity sha512-IbHCqxIJy/o4JlvJU22Y1haXkQfDd0iVpNOm8xKKwtXWhn6CD9JvbvEM2401uKx3GjVQi66XLXhbQp+LnrQalg==
   dependencies:
     bunyan-formatter "^1.0.0"
     change-case "^4.1.1"
