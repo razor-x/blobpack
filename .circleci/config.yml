@@ -108,7 +108,7 @@ jobs:
     description: Publish Node.js package
     executor:
       name: node
-      tag: dubnium
+      tag: erbium
     steps:
       - setup
       - install
@@ -139,22 +139,22 @@ workflows:
           is_alpine: true
           <<: *filters
       - test:
+          name: test-fermium
+          tag: fermium
+          <<: *filters
+      - test:
+          name: test-fermium-alpine
+          tag: fermium-alpine
+          is_alpine: true
+          <<: *filters
+      - test:
           name: test-erbium
           tag: erbium
+          upload_coverage: true
           <<: *filters
       - test:
           name: test-erbium-alpine
           tag: erbium-alpine
-          is_alpine: true
-          <<: *filters
-      - test:
-          name: test-dubnium
-          tag: dubnium
-          upload_coverage: true
-          <<: *filters
-      - test:
-          name: test-dubnium-alpine
-          tag: dubnium-alpine
           is_alpine: true
           <<: *filters
       - publish:
@@ -165,7 +165,7 @@ workflows:
           requires:
             - test-latest
             - test-latest-alpine
+            - test-fermium
+            - test-fermium-alpine
             - test-erbium
             - test-erbium-alpine
-            - test-dubnium
-            - test-dubnium-alpine
