@@ -26,19 +26,19 @@ Bootstrap a new JavaScript module in five minutes or less.
 
 [AVA]: https://github.com/avajs/ava
 [Babel]: https://babeljs.io/
+[ESLint]: https://eslint.org/
 [EditorConfig]: https://editorconfig.org/
 [GitHub Actions]: https://github.com/features/actions
 [Istanbul]: https://istanbul.js.org/
-[ESLint]: https://eslint.org/
 [JavaScript Standard Style]: https://standardjs.com/
 [Keep a CHANGELOG]: https://keepachangelog.com/
 [Node.js]: https://nodejs.org/
 [Prettier]: https://prettier.io/
 [Shields.io]: https://shields.io/
+[Yarn]: https://yarnpkg.com/
 [examplr]: https://github.com/meltwater/node-examplr
 [npm]: https://www.npmjs.com/
 [nyc]: https://github.com/istanbuljs/nyc
-[Yarn]: https://yarnpkg.com/
 
 ### Bootstrapping a new project
 
