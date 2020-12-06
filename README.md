@@ -17,7 +17,6 @@ Bootstrap a new JavaScript module in five minutes or less.
 - Examples with configurable options and arguments powered by [examplr].
 - Linting with the [JavaScript Standard Style] and [JSON Lint].
 - [Prettier] code.
-- Automatically lint on changes with [gulp].
 - Futuristic debuggable unit testing with [AVA].
 - Code coverage reporting with [Istanbul] and [nyc].
 - Continuous testing and automated package publishing with [GitHub Actions].
@@ -37,7 +36,6 @@ Bootstrap a new JavaScript module in five minutes or less.
 [Prettier]: https://prettier.io/
 [Shields.io]: https://shields.io/
 [examplr]: https://github.com/meltwater/node-examplr
-[gulp]: https://gulpjs.com/
 [npm]: https://www.npmjs.com/
 [nyc]: https://github.com/istanbuljs/nyc
 [Yarn]: https://yarnpkg.com/
@@ -131,10 +129,9 @@ $ nvm install
 $ yarn install
 ```
 
-Run each command below in a separate terminal window:
+Run the command below in a separate terminal window:
 
 ```
-$ yarn run lint:watch
 $ yarn run test:watch
 ```
 
