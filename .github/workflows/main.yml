@@ -14,10 +14,8 @@ jobs:
           - '12'
           - '14'
     steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2-beta
         with:
@@ -51,10 +49,8 @@ jobs:
           - '12'
           - '14'
     steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2-beta
         with:
@@ -88,10 +84,8 @@ jobs:
           - '12'
           - '14'
     steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2-beta
         with:
