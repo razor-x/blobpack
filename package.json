@@ -44,42 +44,6 @@
     "format:js": "standard --fix",
     "report": "nyc report"
   },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
-  },
-  "ava": {
-    "files": [
-      "**/*.spec.js",
-      "!dist/**/*",
-      "!package/**/*"
-    ],
-    "require": [
-      "@babel/register"
-    ]
-  },
-  "nyc": {
-    "exclude": [
-      "**/index.js",
-      "dist/**/*.js",
-      "package/**/*.js",
-      "examples/**/*.js",
-      "**/*.spec.js"
-    ],
-    "reporter": [
-      "html",
-      "lcov",
-      "text"
-    ]
-  },
   "engines": {
     "node": ">=10.13.0"
   },

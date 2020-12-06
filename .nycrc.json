@@ -1,0 +1,10 @@
+{
+  "exclude": [
+    "**/index.js",
+    "dist/**/*.js",
+    "package/**/*.js",
+    "examples/**/*.js",
+    "**/*.spec.js"
+  ],
+  "reporter": ["html", "lcov", "text"]
+}
