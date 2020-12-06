@@ -42,12 +42,6 @@ Pass arguments to examples with
 $ yarn run example todo false
 ```
 
-Automatically watch and rerun an example on changes with, e.g.,
-
-```
-$ yarn run example:watch todo
-```
-
 #### Debugging examples
 
 Debug examples with, e.g.,
@@ -65,12 +59,6 @@ export default ({log}) => async () => {
   debugger
   // ...
 }
-```
-
-Automatically watch and rerun a debuggable example on changes with, e.g.,
-
-```
-$ yarn run example:inspect:watch todo
 ```
 
 ## Writing New Examples
