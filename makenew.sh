@@ -57,10 +57,7 @@ makenew () {
   read -p '> GitHub user or organization name (my-user): ' mk_user
   read -p '> GitHub repository name (my-repo): ' mk_repo
 
-  circleci="https://circleci.com/gh/${mk_user}/${mk_repo}"
-  read -p "> Follow the CircleCI project at ${circleci} then press enter." mk_null
-
-  sed_delete README.md '10,107d'
+  sed_delete README.md '10,104d'
   sed_insert README.md '10i' 'TODO'
 
   find_replace "s/\"version\": \".*\"/\"version\": \"0.0.0\"/g"
