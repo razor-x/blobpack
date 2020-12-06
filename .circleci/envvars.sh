@@ -31,12 +31,6 @@ help_npm_token () {
   echo '> Use an npm token with publish permission.'
 }
 
-help_codecov () {
-  echo
-  echo '> Get the Repository Upload Token at' \
-       "https://codecov.io/gh/${circle_repo}/settings"
-}
-
 command -v jq >/dev/null 2>&1 || \
   (echo 'jq required: https://stedolan.github.io/jq/' && exit 2)
 
@@ -74,14 +68,7 @@ main () {
     read -p '> NPM token (NPM_TOKEN): ' npm_token
   fi
 
-  codecov_token=${CI_CODECOV_TOKEN:-}
-  [[ -n "${codecov_token}" || $noninteractive == 'true' ]] || help_codecov
-  if [[ -z $codecov_token && $noninteractive != 'true' ]]; then
-    read -p '> Codecov token (CODECOV_TOKEN): ' codecov_token
-  fi
-
   envvar 'NPM_TOKEN' "${npm_token}"
-  envvar 'CODECOV_TOKEN' "${codecov_token}"
 }
 
 noninteractive=${NONINTERACTIVE:-false}

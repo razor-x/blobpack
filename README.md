@@ -1,7 +1,6 @@
 # JavaScript Module Package Skeleton
 
 [![npm](https://img.shields.io/npm/v/@makenew/jsmodule.svg)](https://www.npmjs.com/package/@makenew/jsmodule)
-[![Codecov](https://img.shields.io/codecov/c/github/makenew/jsmodule.svg)](https://codecov.io/gh/makenew/jsmodule)
 [![CircleCI](https://img.shields.io/circleci/project/github/makenew/jsmodule.svg)](https://circleci.com/gh/makenew/jsmodule)
 
 Package skeleton for a JavaScript module.
@@ -20,7 +19,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 - [Prettier] code.
 - Automatically lint on changes with [gulp].
 - Futuristic debuggable unit testing with [AVA].
-- Code coverage reporting with [Istanbul], [nyc], and [Codecov].
+- Code coverage reporting with [Istanbul] and [nyc].
 - Continuous testing and automated package publishing with [CircleCI].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
@@ -29,7 +28,6 @@ Bootstrap a new JavaScript module in five minutes or less.
 [AVA]: https://github.com/avajs/ava
 [Babel]: https://babeljs.io/
 [CircleCI]: https://circleci.com/
-[Codecov]: https://codecov.io/
 [EditorConfig]: https://editorconfig.org/
 [Istanbul]: https://istanbul.js.org/
 [JSON Lint]: https://github.com/zaach/jsonlint
@@ -208,7 +206,6 @@ _CircleCI should already be configured: this section is for reference only._
 The following environment variables must be set on [CircleCI]:
 
 - `NPM_TOKEN`: npm token for installing and publishing packages.
-- `CODECOV_TOKEN`: Codecov token for uploading coverage reports (optional).
 
 These may be set manually or by running the script `./.circleci/envvars.sh`.
 
