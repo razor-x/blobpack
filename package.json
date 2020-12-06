@@ -41,7 +41,7 @@
     "postversion": "git push --follow-tags",
     "example": "babel-node examples",
     "example:inspect": "babel-node --inspect examples",
-    "format": "npm-run-all --serial pretty format:*",
+    "format": "npm-run-all --serial format:prettier format:js",
     "format:prettier": "prettier --write --ignore-path .gitignore '**/*.(js|json|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
     "report": "nyc report"
