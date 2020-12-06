@@ -15,7 +15,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 - Fast, reliable, and secure dependency management with [Yarn].
 - Next generation JavaScript with [Babel].
 - Examples with configurable options and arguments powered by [examplr].
-- Linting with the [JavaScript Standard Style] and [JSON Lint].
+- Linting with the [JavaScript Standard Style] using [ESLint].
 - [Prettier] code.
 - Futuristic debuggable unit testing with [AVA].
 - Code coverage reporting with [Istanbul] and [nyc].
@@ -29,7 +29,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 [EditorConfig]: https://editorconfig.org/
 [GitHub Actions]: https://github.com/features/actions
 [Istanbul]: https://istanbul.js.org/
-[JSON Lint]: https://github.com/zaach/jsonlint
+[ESLint]: https://eslint.org/
 [JavaScript Standard Style]: https://standardjs.com/
 [Keep a CHANGELOG]: https://keepachangelog.com/
 [Node.js]: https://nodejs.org/

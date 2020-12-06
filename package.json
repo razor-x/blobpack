@@ -29,7 +29,7 @@
     "test:update": "ava --update-snapshots",
     "test:watch": "ava --watch",
     "test:debug": "ava debug --break",
-    "lint": "standard",
+    "lint": "eslint --ignore-path .gitignore --ext .js .",
     "clean": "del dist",
     "build": "npm-run-all --parallel build:*",
     "prebuild": "npm-run-all clean",
@@ -41,15 +41,11 @@
     "example:inspect": "babel-node --inspect examples",
     "pretty": "prettier --ignore-path .gitignore --write '**/*.(js|json|graphql)'",
     "format": "npm-run-all --serial pretty format:*",
-    "format:js": "standard --fix",
+    "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
     "report": "nyc report"
   },
   "engines": {
     "node": ">=10.13.0"
-  },
-  "resolutions": {
-    "eslint": "^7.12.1",
-    "standard": "^16.0.2"
   },
   "dependencies": {},
   "devDependencies": {
@@ -61,7 +57,12 @@
     "@meltwater/examplr": "^5.0.0",
     "ava": "^3.3.0",
     "del-cli": "^3.0.0",
-    "eslint": "^7.12.1",
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^16.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
     "npm-run-all": "^4.1.2",
     "nyc": "^15.0.0",
     "prettier": "^2.0.2",
