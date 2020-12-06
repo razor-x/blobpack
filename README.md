@@ -197,7 +197,7 @@ using a [workflow_dispatch on GitHub Actions].
 
 _GitHub Actions should already be configured: this section is for reference only._
 
-The following environment variables must be set on [GitHub Actions]:
+The following repository secrets must be set on [GitHub Actions]:
 
 - `NPM_TOKEN`: npm token for installing and publishing packages.
 
