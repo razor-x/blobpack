@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: https://registry.npmjs.org
       - name: Check published version
         id: published-version
         run: echo "::set-output name=version::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
