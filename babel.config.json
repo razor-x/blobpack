@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    ["add-import-extension", { "extension": "cjs", "replace": true }]
+  ],
   "presets": [
     [
       "@babel/preset-env",
