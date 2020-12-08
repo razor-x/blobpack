@@ -40,6 +40,8 @@ jobs:
             ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
+      - name: Build
+        run: yarn run build
       - name: Publish
         if: ${{ endsWith(github.ref, format('v{0}', steps.published-version.outputs.version)) == false }}
         run: npm publish --access public
@@ -79,6 +81,8 @@ jobs:
             ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
+      - name: Build
+        run: yarn run build
       - name: Publish
         run: npm publish --access public
         if: ${{ endsWith(github.ref, format('v{0}', steps.published-version.outputs.version)) == false }}
