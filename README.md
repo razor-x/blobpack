@@ -19,7 +19,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 - [Prettier] code.
 - Futuristic debuggable unit testing with [AVA].
 - Code coverage reporting with [Istanbul] and [nyc].
-- Continuous testing and automated package publishing with [GitHub Actions].
+- Continuous testing and package publishing with [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 - Badges from [Shields.io].
