@@ -35,7 +35,7 @@
     "test:watch": "ava --watch",
     "test:debug": "ava debug --break",
     "lint": "npm-run-all lint:*",
-    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|graphql)'",
+    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "lint:js": "eslint --ignore-path .gitignore --ext .js .",
     "clean": "del dist",
     "build": "npm-run-all --parallel build:*",
@@ -47,7 +47,7 @@
     "example": "node examples",
     "example:inspect": "node --inspect examples",
     "format": "npm-run-all --serial format:prettier format:js",
-    "format:prettier": "prettier --write --ignore-path .gitignore '**/*.(js|json|graphql)'",
+    "format:prettier": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
     "report": "nyc report"
   },
