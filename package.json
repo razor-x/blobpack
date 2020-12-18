@@ -34,7 +34,7 @@
     "test:update": "ava --update-snapshots",
     "test:watch": "ava --watch",
     "test:debug": "ava debug --break",
-    "lint": "npm-run-all lint:*",
+    "lint": "npm-run-all --parallel lint:*",
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "lint:js": "eslint --ignore-path .gitignore --ext .js .",
     "clean": "del dist",
