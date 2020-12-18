@@ -46,8 +46,8 @@
     "postversion": "git push --follow-tags",
     "example": "node examples",
     "example:inspect": "node --inspect examples",
-    "format": "npm-run-all --serial format:prettier format:js",
-    "format:prettier": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
+    "format": "npm-run-all --parallel format:*",
+    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
     "report": "nyc report"
   },
