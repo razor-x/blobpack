@@ -6,6 +6,9 @@ on:
     inputs:
       version:
         description: Version to cut
+  repository_dispatch:
+    types:
+      - version
 
 jobs:
   release:
@@ -62,4 +65,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: Cut version
-        run: npm version ${{ github.event.inputs.version }}
+        run: npm version ${{ github.event.inputs.version }}${{ github.event.client_payload.version }}
