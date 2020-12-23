@@ -56,7 +56,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@ava/babel": "^1.0.1",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.1",
     "@babel/node": "^7.0.0",

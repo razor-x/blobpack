@@ -1,11 +1,3 @@
 export default () => ({
-  files: ['**/*.spec.js', '!dist/**/*', '!package/**/*'],
-  ...isBabelRequired() ? { babel } : {}
+  files: ['**/*.spec.js', '!dist/**/*', '!package/**/*']
 })
-
-const isBabelRequired = () => {
-  const [majorVer] = process.versions.node.split()
-  return Number(majorVer) < 14
-}
-
-const babel = true
