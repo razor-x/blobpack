@@ -1,10 +1,8 @@
 import path from 'path'
 
-import examplr from '@meltwater/examplr'
+import { createExamples } from '@meltwater/examplr'
 
 import todo from './todo.js'
-
-const { createExamples } = examplr
 
 const examples = {
   todo
