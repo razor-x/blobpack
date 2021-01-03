@@ -84,7 +84,7 @@ export default ({log}) => async () => {
 2. Import and add the example to `examples/index.js`, e.g.,
    ```js
    /* examples/index.js */
-   import queryApi from './query-api'
+   import queryApi from './query-api.js'
 
    export const examples = {
      queryApi,
@@ -133,7 +133,7 @@ export default ({log}) => async () => {
 2. Import and add filters to `examples/index.js`, e.g.,
    ```js
    /* examples/index.js */
-   import filters from './filters'
+   import filters from './filters.js'
 
    const { runExample } = createExamples({
      filters,
