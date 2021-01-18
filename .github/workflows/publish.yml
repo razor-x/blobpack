@@ -43,7 +43,7 @@ jobs:
         run: yarn install --frozen-lockfile --non-interactive
       - name: Build
         run: yarn run build
-      - name: Publish
+      - name: Publish ${{ steps.published-version.outputs.version }}
         if: ${{ endsWith(github.ref, format('v{0}', steps.published-version.outputs.version)) == false }}
         run: npm publish --access public
         env:
@@ -84,7 +84,7 @@ jobs:
         run: yarn install --frozen-lockfile --non-interactive
       - name: Build
         run: yarn run build
-      - name: Publish
+      - name: Publish ${{ steps.published-version.outputs.version }}
         run: npm publish --access public
         if: ${{ endsWith(github.ref, format('v{0}', steps.published-version.outputs.version)) == false }}
         env:
