@@ -1,6 +1,6 @@
 {
   "name": "@makenew/jsmodule",
-  "version": "6.2.3",
+  "version": "6.2.4",
   "description": "Package skeleton for a JavaScript module.",
   "type": "module",
   "main": "dist/index.cjs",
