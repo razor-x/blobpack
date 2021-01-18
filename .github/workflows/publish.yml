@@ -17,9 +17,12 @@ jobs:
         with:
           node-version: '12'
           registry-url: https://registry.npmjs.org
-      - name: Check published version
-        id: published-version
-        run: echo "::set-output name=version::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
+      - name: Check version
+        id: version
+        run: |
+          echo "::set-output name=name::$(jq -r '.name' package.json)"
+          echo "::set-output name=version::$(jq -r '.version' package.json)"
+          echo "::set-output name=published::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Get yarn cache directory
@@ -43,8 +46,8 @@ jobs:
         run: yarn install --frozen-lockfile --non-interactive
       - name: Build
         run: yarn run build
-      - name: Publish ${{ steps.published-version.outputs.version }}
-        if: ${{ endsWith(github.ref, format('v{0}', steps.published-version.outputs.version)) == false }}
+      - name: Publish ${{ steps.version.outputs.name }}@${{ steps.version.outputs.current }}
+        if: ${{ endsWith(github.ref, format('v{0}', steps.version.outputs.published)) == false }}
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -58,9 +61,12 @@ jobs:
         with:
           node-version: '12'
           registry-url: https://npm.pkg.github.com
-      - name: Check published version
-        id: published-version
-        run: echo "::set-output name=version::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
+      - name: Check version
+        id: version
+        run: |
+          echo "::set-output name=name::$(jq -r '.name' package.json)"
+          echo "::set-output name=version::$(jq -r '.version' package.json)"
+          echo "::set-output name=published::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Get yarn cache directory
@@ -84,8 +90,8 @@ jobs:
         run: yarn install --frozen-lockfile --non-interactive
       - name: Build
         run: yarn run build
-      - name: Publish ${{ steps.published-version.outputs.version }}
+      - name: Publish ${{ steps.version.outputs.name }}@${{ steps.version.outputs.current }}
+        if: ${{ endsWith(github.ref, format('v{0}', steps.version.outputs.published)) == false }}
         run: npm publish --access public
-        if: ${{ endsWith(github.ref, format('v{0}', steps.published-version.outputs.version)) == false }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
