@@ -1,7 +1,4 @@
 {
   "root": true,
-  "extends": ["standard", "prettier"],
-  "rules": {
-    "space-before-function-paren": "off"
-  }
+  "extends": ["standard", "prettier"]
 }
