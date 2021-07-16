@@ -64,7 +64,7 @@
     "@meltwater/examplr": "^6.0.0",
     "ava": "^3.3.0",
     "babel-plugin-add-import-extension": "^1.4.3",
-    "del-cli": "^3.0.0",
+    "del-cli": "^4.0.1",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.0",
