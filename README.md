@@ -100,8 +100,8 @@ boring:
 ```
 
 First, add the `artifacts` section to the `benthos` config.
-This will generate a new artifact to `dist/event.zip` which uses
-`config/event.yaml` and merges resources in both
+This will generate a new artifact to `dist/boring.zip` which uses
+`config/boring.yaml` and merges resources in both
 `resources/outputs.yaml` and `node_modules/@pureskillgg/blobd/resources/logger.yaml`.
 
 ```json
@@ -109,10 +109,23 @@ This will generate a new artifact to `dist/event.zip` which uses
   "benthos": {
     "artifacts": [
       {
-        "name": "event",
+        "name": "boring",
         "resources": ["outputs"],
         "node_modules/@pureskillgg/blobd/resources": ["logger"]
       }
+    ]
+  }
+}
+```
+
+If you only need to package a single config file into the artifact,
+you can use this shorthand,
+
+```json
+{
+  "benthos": {
+    "artifacts": [
+      "boring"
     ]
   }
 }
