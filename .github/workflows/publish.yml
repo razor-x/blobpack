@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '14'
           registry-url: https://registry.npmjs.org
       - name: Check version
         id: version
@@ -44,8 +44,6 @@ jobs:
             ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
-      - name: Build
-        run: yarn run build
       - name: Publish ${{ steps.version.outputs.name }}@${{ steps.version.outputs.current }}
         if: ${{ endsWith(github.ref, format('v{0}', steps.version.outputs.published)) == false }}
         run: npm publish --access public

@@ -4,12 +4,12 @@
   "description": "Packaging Benthos configs for AWS Lambda was too exciting, now it's acceptably boring.",
   "type": "module",
   "bin": "bin/blobpack.js",
-  "main": "dist/index.cjs",
+  "main": "index.js",
   "exports": {
-    "import": "./index.js",
-    "require": "./dist/index.cjs"
+    "import": "./index.js"
   },
   "module": "index.js",
+  "sideEffects": false,
   "sideEffects": false,
   "keywords": [
     "benthos",
@@ -29,7 +29,6 @@
     "bin",
     "lib",
     "data",
-    "dist",
     "docs"
   ],
   "scripts": {
@@ -42,12 +41,7 @@
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "lint:js": "eslint --ignore-path .gitignore --ext .js .",
     "lint:docs": "documentation lint 'lib/**/*.doc.js'",
-    "clean": "del dist",
-    "build": "npm-run-all --parallel build:*",
-    "prebuild": "npm-run-all clean",
-    "build:index": "babel --source-maps --out-file-extension .cjs --out-dir dist index.js",
-    "build:lib": "babel --source-maps --out-file-extension .cjs --ignore='**/*.spec.js' --out-dir dist/lib lib",
-    "preversion": "npm-run-all --parallel lint test build",
+    "preversion": "npm-run-all --parallel lint test",
     "postversion": "git push --follow-tags",
     "example": "node examples",
     "example:inspect": "node --inspect examples",
@@ -59,7 +53,7 @@
     "report": "nyc report"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=14.15.0"
   },
   "dependencies": {
     "download": "^8.0.0",
@@ -68,16 +62,11 @@
     "mkdirp": "^1.0.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.1",
+    "@babel/core": "^7.14.6",
     "@babel/eslint-parser": "^7.15.4",
-    "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "@meltwater/examplr": "^6.0.0",
     "ava": "^3.3.0",
-    "babel-plugin-add-import-extension": "^1.4.3",
     "del": "^6.0.0",
-    "del-cli": "^4.0.1",
     "documentation": "^13.2.5",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^8.3.0",
