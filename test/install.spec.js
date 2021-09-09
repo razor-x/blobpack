@@ -17,7 +17,7 @@ test('install', async (t) => {
     }
   }
   const outputPath = await install({ configPath, tmpRoot, logger })
-  await install({ tmpRoot, logger })
+  await install({ configPath, tmpRoot, logger })
   await fs.promises.access(outputPath)
   t.pass()
 })

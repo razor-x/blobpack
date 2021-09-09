@@ -21,7 +21,7 @@ test.beforeEach(async (t) => {
   try {
     await fs.promises.access(outputPath)
   } catch {
-    await install({ tmpRoot, logger })
+    await install({ configPath, tmpRoot, logger })
   }
 })
 
