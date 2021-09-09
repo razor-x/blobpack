@@ -1,5 +1,5 @@
 {
-  "name": "@razor-x/blobpack",
+  "name": "blobpack",
   "version": "0.0.0",
   "description": "Package Benthos configs for AWS Lambda.",
   "type": "module",
