@@ -36,13 +36,13 @@ and its [underlying JavaScript API](http://io.evansosenko.com/blobpack/).
 Add this as a dependency to your project using [npm] with
 
 ```
-$ npm install blobpack
+$ npm install --save-dev blobpack
 ```
 
 or using [Yarn] with
 
 ```
-$ yarn add blobpack
+$ yarn add --dev blobpack
 ```
 
 [npm]: https://www.npmjs.com/
