@@ -44,5 +44,8 @@ test('build', async (t) => {
     distRoot,
     logger
   })
+  for (const outputPath of artifacts) {
+    await fs.promises.access(outputPath)
+  }
   t.deepEqual(artifacts, [path.resolve(distRoot, 'foo.zip')])
 })
