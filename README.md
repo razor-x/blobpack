@@ -136,6 +136,22 @@ you can use this shorthand,
 }
 ```
 
+If you want to merge a common set of resources into every config,
+you can use the `include` property,
+
+```json
+{
+  "benthos": {
+    "include": {
+      "resources": ["logger"]
+    },
+    "artifacts": [
+      "boring"
+    ]
+  }
+}
+```
+
 ## Development and Testing
 
 ### Quickstart
