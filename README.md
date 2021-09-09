@@ -157,6 +157,37 @@ you can use the `include` property,
 }
 ```
 
+### CLI
+
+The `blobpack` command supports passing options:
+
+```
+$ blobpack --version
+$ blobpack version
+```
+
+```
+$ blobpack install \
+  --config-path ./package.json \
+  --tmp-root ./tmp
+```
+
+```
+$ blobpack \
+  --config-path ./package.json \
+  --tmp-root ./tmp \
+  --config-root ./config \
+  --resources-root ./resources \
+  --dist-root ./dist
+
+$ blobpack build \
+  --config-path ./package.json \
+  --tmp-root ./tmp \
+  --config-root ./config \
+  --resources-root ./resources \
+  --dist-root ./dist
+```
+
 ## Development and Testing
 
 ### Quickstart
