@@ -8,6 +8,7 @@
 # Build directories
 dist
 package
+.docs
 
 # Local config
 examples/local.json

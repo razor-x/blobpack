@@ -38,6 +38,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "lint:js": "eslint --ignore-path .gitignore --ext .js .",
+    "lint:docs": "documentation lint 'lib/**/*.doc.js'",
     "clean": "del dist",
     "build": "npm-run-all --parallel build:*",
     "prebuild": "npm-run-all clean",
@@ -50,6 +51,8 @@
     "format": "npm-run-all --parallel format:*",
     "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
+    "docs": "documentation serve --watch --github 'lib/**/*.doc.js'",
+    "docs:build": "documentation build --format html --github --output .docs 'lib/**/*.doc.js'",
     "report": "nyc report"
   },
   "engines": {
@@ -66,6 +69,7 @@
     "ava": "^3.3.0",
     "babel-plugin-add-import-extension": "^1.4.3",
     "del-cli": "^4.0.1",
+    "documentation": "^13.2.5",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.0",
