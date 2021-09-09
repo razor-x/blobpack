@@ -1,6 +1,6 @@
 {
   "name": "blobpack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package Benthos configs for AWS Lambda.",
   "type": "module",
   "main": "dist/index.cjs",
