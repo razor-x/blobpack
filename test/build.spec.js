@@ -3,6 +3,7 @@ import path from 'path'
 
 import test from 'ava'
 
+import { zipName } from '../lib/install.js'
 import { build, install, loadJson } from '../index.js'
 
 const tmpRoot = path.join('tmp', 'build-spec')
@@ -10,7 +11,7 @@ const configPath = path.join('fixtures', 'config.json')
 
 test.beforeEach(async (t) => {
   const { benthos } = await loadJson(configPath)
-  const name = `${benthos.name}_${benthos.version}_${benthos.platform}.zip`
+  const name = zipName(benthos)
   const outputPath = path.join(tmpRoot, name)
   const logger = {
     log: (msg) => t.log(msg),
