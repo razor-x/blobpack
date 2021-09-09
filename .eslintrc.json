@@ -1,4 +1,40 @@
 {
   "root": true,
-  "extends": ["standard", "prettier"]
+  "extends": ["standard", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  },
+  "rules": {
+    "valid-jsdoc": "error",
+    "no-console": "warn",
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreDeclarationSort": true,
+        "allowSeparatedGroups": true
+      }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin", "object"],
+        "pathGroups": [
+          {
+            "pattern": "src/**",
+            "group": "internal"
+          }
+        ]
+      }
+    ]
+  }
 }
