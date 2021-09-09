@@ -3,7 +3,7 @@ import path from 'path'
 
 import test from 'ava'
 
-import { zipName } from '../lib/install.js'
+import { zipName } from '../lib/zip-name.js'
 import { build, install, loadJson } from '../index.js'
 
 const tmpRoot = path.join('tmp', 'build-spec')
