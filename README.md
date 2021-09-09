@@ -25,7 +25,11 @@ This can be used with any tool can deploy ZIP artifacts to AWS Lambda.
 Since [Serverless] and the [AWS CDK] are both popular deployment
 solutions that support Node.js, this tool is distributed as an npm package.
 
-This package exposes a CLI tool `blobpack`, and its underlying JavaScript API.
+This package exposes a CLI tool `blobpack`,
+and its [underlying JavaScript API](http://io.evansosenko.com/blobpack/).
+
+[Serverless]: https://serverless.com/
+[AWS CDK]: https://aws.amazon.com/cdk/
 
 ## Installation
 
