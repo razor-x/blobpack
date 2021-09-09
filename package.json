@@ -1,6 +1,6 @@
 {
   "name": "blobpack",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Packaging Benthos configs for AWS Lambda was too exciting, now it's acceptably boring.",
   "type": "module",
   "bin": "bin/blobpack.js",
@@ -9,7 +9,6 @@
     "import": "./index.js"
   },
   "module": "index.js",
-  "sideEffects": false,
   "sideEffects": false,
   "keywords": [
     "benthos",
