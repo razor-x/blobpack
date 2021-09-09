@@ -7,7 +7,7 @@ import del from 'del'
 import { install } from '../index.js'
 
 test('install', async (t) => {
-  const pkg = path.join('fixtures', 'config.json')
+  const configPath = path.join('fixtures', 'config.json')
   const tmpRoot = path.join('tmp', 'install-spec')
   await del(tmpRoot)
   const logger = {
@@ -16,7 +16,7 @@ test('install', async (t) => {
       t.log(err.message)
     }
   }
-  const outputPath = await install({ pkg, tmpRoot, logger })
+  const outputPath = await install({ configPath, tmpRoot, logger })
   await install({ tmpRoot, logger })
   await fs.promises.access(outputPath)
   t.pass()

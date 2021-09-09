@@ -6,10 +6,10 @@ import test from 'ava'
 import { build, install, loadJson } from '../index.js'
 
 const tmpRoot = path.join('tmp', 'build-spec')
-const pkg = path.join('fixtures', 'config.json')
+const configPath = path.join('fixtures', 'config.json')
 
 test.beforeEach(async (t) => {
-  const { benthos } = await loadJson(pkg)
+  const { benthos } = await loadJson(configPath)
   const name = `${benthos.name}_${benthos.version}_${benthos.platform}.zip`
   const outputPath = path.join(tmpRoot, name)
   const logger = {
@@ -36,7 +36,7 @@ test('build', async (t) => {
     }
   }
   const artifacts = await build({
-    pkg,
+    configPath,
     tmpRoot,
     configRoot,
     resourcesRoot,
