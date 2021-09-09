@@ -55,6 +55,7 @@
     "node": ">=14.15.0"
   },
   "dependencies": {
+    "arg": "^5.0.1",
     "download": "^8.0.0",
     "js-yaml": "^4.1.0",
     "jszip": "^3.7.1",
