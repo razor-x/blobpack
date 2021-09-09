@@ -101,10 +101,11 @@ boring:
 
 First, add the `artifacts` section to the `benthos` config.
 This will generate a new artifact to `dist/boring.zip` which uses
-`config/boring.yaml` and merges resources in both
+`config/boring.yaml` and intelligently merges resources in both
 `resources/outputs.yaml` and `node_modules/@my-org/blobd/resources/logger.yaml`.
 
-_Tip: put your common resources in an npm package like @my-org/blobd_
+_Tip: any top level keys which are not of type `*_resources` will still be included.
+If two files have the same key, the last one wins._
 
 ```json
 {
@@ -119,6 +120,8 @@ _Tip: put your common resources in an npm package like @my-org/blobd_
   }
 }
 ```
+
+_Tip: put your common resources in an npm package like @my-org/blobd_
 
 If you only need to package a single config file into the artifact,
 you can use this shorthand,
