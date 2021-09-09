@@ -50,10 +50,11 @@ $ yarn add blobpack
 
 ### Usage
 
-#### Download and install Benthos Lambda binary
+#### Download the Benthos Lambda Archive
 
 In order to create Benthos artifact to deploy to AWS Lambda,
-the Benthos lambda binary must be downloaded locally to `tmp`.
+the upstream Benthos lambda archive must be downloaded locally to `tmp`.
+
 To have this happen automatically after `npm install`,
 add this to your `package.json`,
 
@@ -73,22 +74,35 @@ add this to your `package.json`,
 
 #### Create Serverless Artifacts
 
-Assuming you want to deploy the below [Serverless] function,
-you will need to generate the `event.zip` artifact to deploy.
+First, add a new build step and ensure it runs before deployment,
+
+```json
+{
+  "scripts": {
+    "blobpack": "blobpack"
+  }
+}
+```
+
+Assuming you want to deploy the below Serverless function,
+you will need to generate the `boring.zip` artifact to deploy.
 
 _Tip: you can reuse the same artifact for multiple functions._
 
 ```yaml
-event:
+boring:
   handler: benthos-lambda
   package:
-    artifact: dist/event.zip
+    artifact: dist/boring.zip
     individually: true
     exclude: ['*/**']
     include: []
 ```
 
-First, add an `artifacts` section in the `benthos` config
+First, add the `artifacts` section to the `benthos` config.
+This will generate a new artifact to `dist/event.zip` which uses
+`config/event.yaml` and merges resources in both
+`resources/outputs.yaml` and `node_modules/@pureskillgg/blobd/resources/logger.yaml`.
 
 ```json
 {
@@ -103,22 +117,6 @@ First, add an `artifacts` section in the `benthos` config
   }
 }
 ```
-
-This will generate a new artifact to `dist/event.zip` which uses
-`config/event.yaml` and merges resources in both
-`resources/outputs.yaml` and `node_modules/@pureskillgg/blobd/resources/logger.yaml`.
-
-Finally add a new build step that should run before deployment,
-
-```json
-{
-  "scripts": {
-    "blobpack": "blobpack"
-  }
-}
-```
-
-Finally, add the new Serverless function config:
 
 ## Development and Testing
 
