@@ -10,7 +10,22 @@ Package [Benthos] configs for [AWS Lambda].
 
 ## Description
 
-TODO
+Benthos on AWS Lambda requires either a single `config.yaml` file inside its
+deployed ZIP artifact or the config passed as an environment variable.
+Since AWS Lambda limits its environment variable size, even simple Benthos configs
+are too large to deploy.
+
+This tool allows you to write and test Benthos configs as you normally would,
+e.g., splitting and sharing resources across multiple files.
+For each config you want to deploy, Blobpack merges
+the selected Benthos YAML files into a single `config.yaml` and
+packages it into a ZIP file with Benthos for deployment to AWS Lambda.
+
+This can be used with any tool can deploy ZIP artifacts to AWS Lambda.
+Since [Serverless] and the [AWS CDK] are both popular deployment
+solutions that support Node.js, this tool is distributed as an npm package.
+
+This package exposes a CLI tool `blobpack`, and its underlying JavaScript API.
 
 ## Installation
 
@@ -28,6 +43,78 @@ $ yarn add blobpack
 
 [npm]: https://www.npmjs.com/
 [Yarn]: https://yarnpkg.com/
+
+### Usage
+
+#### Download and install Benthos Lambda binary
+
+In order to create Benthos artifact to deploy to AWS Lambda,
+the Benthos lambda binary must be downloaded locally to `tmp`.
+To have this happen automatically after `npm install`,
+add this to your `package.json`,
+
+```json
+{
+  "scripts": {
+    "postinstall": "blobpack install"
+  },
+  "benthos": {
+    "name": "benthos-lambda",
+    "version": "3.54.1",
+    "platform": "linux_amd64",
+    "src": "https://github.com/jeffail/benthos/releases/download"
+  }
+}
+```
+
+#### Create Serverless Artifacts
+
+Assuming you want to deploy the below [Serverless] function,
+you will need to generate the `event.zip` artifact to deploy.
+
+_Tip: you can reuse the same artifact for multiple functions._
+
+```yaml
+event:
+  handler: benthos-lambda
+  package:
+    artifact: dist/event.zip
+    individually: true
+    exclude: ['*/**']
+    include: []
+```
+
+First, add an `artifacts` section in the `benthos` config
+
+```json
+{
+  "benthos": {
+    "artifacts": [
+      {
+        "name": "event",
+        "resources": ["outputs"],
+        "node_modules/@pureskillgg/blobd/resources": ["logger"]
+      }
+    ]
+  }
+}
+```
+
+This will generate a new artifact to `dist/event.zip` which uses
+`config/event.yaml` and merges resources in both
+`resources/outputs.yaml` and `node_modules/@pureskillgg/blobd/resources/logger.yaml`.
+
+Finally add a new build step that should run before deployment,
+
+```json
+{
+  "scripts": {
+    "blobpack": "blobpack"
+  }
+}
+```
+
+Finally, add the new Serverless function config:
 
 ## Development and Testing
 
