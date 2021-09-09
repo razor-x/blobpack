@@ -1,7 +1,7 @@
 {
-  "name": "@makenew/jsmodule",
-  "version": "6.4.0",
-  "description": "Package skeleton for a JavaScript module.",
+  "name": "@razor-x/blobpack",
+  "version": "0.0.0",
+  "description": "Package Benthos configs for AWS Lambda.",
   "type": "module",
   "main": "dist/index.cjs",
   "exports": {
@@ -13,9 +13,9 @@
   "keywords": [
     "node"
   ],
-  "homepage": "https://github.com/makenew/jsmodule",
-  "bugs": "https://github.com/makenew/jsmodule/issues",
-  "repository": "makenew/jsmodule",
+  "homepage": "https://github.com/razor-x/blobpack",
+  "bugs": "https://github.com/razor-x/blobpack/issues",
+  "repository": "razor-x/blobpack",
   "license": "MIT",
   "author": {
     "name": "Evan Sosenko",
