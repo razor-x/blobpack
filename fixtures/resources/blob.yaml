@@ -1,7 +1,4 @@
 ---
-logger:
-  level: info
-
 processor_resources:
   - label: blob
     bloblang: |
