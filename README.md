@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/blobpack.svg)](https://www.npmjs.com/package/blobpack)
 [![GitHub Actions](https://github.com/razor-x/blobpack/workflows/main/badge.svg)](https://github.com/razor-x/blobpack/actions)
 
-Package [Benthos] configs for [AWS Lambda].
+Packaging [Benthos] configs for [AWS Lambda] was too exciting, now it's acceptably boring.
 
 [Benthos]: https://www.benthos.dev/
 [AWS Lambda]: https://aws.amazon.com/lambda/
