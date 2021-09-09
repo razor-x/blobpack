@@ -1,0 +1,15 @@
+{
+  "benthos": {
+    "name": "benthos-lambda",
+    "version": "3.54.1",
+    "platform": "linux_amd64",
+    "src": "https://github.com/jeffail/benthos/releases/download",
+    "artifacts": [
+      {
+        "name": "foo",
+        "resources": ["bar"],
+        "other/resources": ["baz"]
+      }
+    ]
+  }
+}

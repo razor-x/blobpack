@@ -3,6 +3,7 @@
   "version": "0.0.5",
   "description": "Packaging Benthos configs for AWS Lambda was too exciting, now it's acceptably boring.",
   "type": "module",
+  "bin": "bin/blobpack.js",
   "main": "dist/index.cjs",
   "exports": {
     "import": "./index.js",
@@ -25,6 +26,7 @@
   "files": [
     "yarn.lock",
     "index.js",
+    "bin",
     "lib",
     "data",
     "dist",
@@ -59,7 +61,12 @@
   "engines": {
     "node": ">=12.13.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "download": "^8.0.0",
+    "js-yaml": "^4.1.0",
+    "jszip": "^3.7.1",
+    "mkdirp": "^1.0.4"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.1",
@@ -69,6 +76,7 @@
     "@meltwater/examplr": "^6.0.0",
     "ava": "^3.3.0",
     "babel-plugin-add-import-extension": "^1.4.3",
+    "del": "^6.0.0",
     "del-cli": "^4.0.1",
     "documentation": "^13.2.5",
     "eslint": "^7.4.0",

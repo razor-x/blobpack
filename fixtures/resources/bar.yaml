@@ -1,0 +1,5 @@
+---
+processor_resources:
+  - label: bar
+    bloblang: |
+      root = content()
