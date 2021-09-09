@@ -3,6 +3,6 @@ logger:
   level: info
 
 processor_resources:
-  - label: blob
+  - label: bar
     bloblang: |
       root = content()
