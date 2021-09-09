@@ -30,7 +30,7 @@ This can be used with any tool that can deploy .zip artifacts to AWS Lambda.
 Since [Serverless] and the [AWS CDK] are both popular deployment
 solutions that support Node.js, this tool is distributed as an npm package.
 
-This package exposes the CLI command blobpack,
+This package exposes the CLI command blobpack
 and its [underlying JavaScript API](http://io.evansosenko.com/blobpack/).
 
 [Serverless]: https://serverless.com/
@@ -126,7 +126,7 @@ If two files have the same key, the last one wins._
 }
 ```
 
-_Tip: put your common resources in an npm package like @my-org/blobd_
+_Tip: put your common resources in an npm package like @my-org/blobd._
 
 If you only need to package a single config file into the artifact,
 you can use this shorthand,
