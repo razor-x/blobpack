@@ -102,7 +102,9 @@ boring:
 First, add the `artifacts` section to the `benthos` config.
 This will generate a new artifact to `dist/boring.zip` which uses
 `config/boring.yaml` and merges resources in both
-`resources/outputs.yaml` and `node_modules/@pureskillgg/blobd/resources/logger.yaml`.
+`resources/outputs.yaml` and `node_modules/@my-org/blobd/resources/logger.yaml`.
+
+_Tip: put your common resources in an npm package like @my-org/blobd_
 
 ```json
 {
@@ -111,7 +113,7 @@ This will generate a new artifact to `dist/boring.zip` which uses
       {
         "name": "boring",
         "resources": ["outputs"],
-        "node_modules/@pureskillgg/blobd/resources": ["logger"]
+        "node_modules/@my-org/blobd/resources": ["logger"]
       }
     ]
   }
