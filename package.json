@@ -11,6 +11,7 @@
   "module": "index.js",
   "sideEffects": false,
   "keywords": [
+    "benthos",
     "node"
   ],
   "homepage": "https://github.com/razor-x/blobpack",
