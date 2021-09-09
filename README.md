@@ -1,4 +1,4 @@
-# Blobpack
+# ![Blobpack](./blobpack.png) Blobpack
 
 [![npm](https://img.shields.io/npm/v/blobpack.svg)](https://www.npmjs.com/package/blobpack)
 [![GitHub Actions](https://github.com/razor-x/blobpack/workflows/main/badge.svg)](https://github.com/razor-x/blobpack/actions)
