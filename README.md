@@ -11,21 +11,21 @@ Packaging [Benthos] configs for [AWS Lambda] was too exciting, now it's acceptab
 ## Description
 
 Benthos on AWS Lambda requires either a single config.yaml file inside its
-deployed ZIP artifact or the config passed as an environment variable.
-Since AWS Lambda limits its environment variable size, even simple Benthos configs
-are too large to deploy.
+deployed .zip artifact or the config passed as an environment variable.
+Since AWS Lambda limits its environment variable size to 4 KB,
+even simple Benthos configs are too large to deploy.
 
 This tool allows you to write and test Benthos configs as you normally would,
-e.g., splitting and sharing resources across multiple files.
+i.e., splitting and sharing resources across multiple files.
 For each config you want to deploy, Blobpack merges
 the selected Benthos YAML files into a single config.yaml and
-packages it into a ZIP file with Benthos for deployment to AWS Lambda.
+packages it into a .zip file with Benthos for deployment to AWS Lambda.
 
-This can be used with any tool can deploy ZIP artifacts to AWS Lambda.
+This can be used with any tool that can deploy .zip artifacts to AWS Lambda.
 Since [Serverless] and the [AWS CDK] are both popular deployment
 solutions that support Node.js, this tool is distributed as an npm package.
 
-This package exposes a CLI tool, blobpack,
+This package exposes the CLI command blobpack,
 and its [underlying JavaScript API](http://io.evansosenko.com/blobpack/).
 
 [Serverless]: https://serverless.com/
