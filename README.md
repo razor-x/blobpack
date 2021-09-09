@@ -177,14 +177,14 @@ $ blobpack \
   --config-path ./package.json \
   --tmp-root ./tmp \
   --config-root ./config \
-  --resources-root ./resources \
+  --resources-root ./ \
   --dist-root ./dist
 
 $ blobpack build \
   --config-path ./package.json \
   --tmp-root ./tmp \
   --config-root ./config \
-  --resources-root ./resources \
+  --resources-root ./ \
   --dist-root ./dist
 ```
 
