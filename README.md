@@ -1,9 +1,12 @@
 # Blobpack
 
-[![npm](https://img.shields.io/npm/v/@razor-x/blobpack.svg)](https://www.npmjs.com/package/@razor-x/blobpack)
+[![npm](https://img.shields.io/npm/v/@razor-x/blobpack.svg)](https://www.npmjs.com/package/blobpack)
 [![GitHub Actions](https://github.com/razor-x/blobpack/workflows/main/badge.svg)](https://github.com/razor-x/blobpack/actions)
 
-Package Benthos configs for AWS Lambda.
+Package [Benthos] configs for [AWS Lambda].
+
+[Benthos]: https://www.benthos.dev/
+[AWS Lambda]: https://aws.amazon.com/lambda/
 
 ## Description
 
@@ -14,13 +17,13 @@ TODO
 Add this as a dependency to your project using [npm] with
 
 ```
-$ npm install @razor-x/blobpack
+$ npm install blobpack
 ```
 
 or using [Yarn] with
 
 ```
-$ yarn add @razor-x/blobpack
+$ yarn add blobpack
 ```
 
 [npm]: https://www.npmjs.com/
