@@ -5,8 +5,13 @@
 
 Packaging [Benthos] configs for [AWS Lambda] was too exciting, now it's acceptably boring.
 
+_If all this still sounds too exciting and you just want to deploy Benthos on AWS Lambda,
+jump over to the [Serverless Benthos Project Skeleton] or the [Benthos Plugin Project Skeleton]._
+
 [Benthos]: https://www.benthos.dev/
 [AWS Lambda]: https://aws.amazon.com/lambda/
+[Serverless Benthos Project Skeleton]: https://github.com/makenew/serverless-benthos
+[Benthos Plugin Project Skeleton]: https://github.com/makenew/benthos-plugin
 
 ## Description
 
