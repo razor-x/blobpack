@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url'
 
 import arg from 'arg'
 
-import { build, install, loadJson } from '../index.js'
+import { loadJson } from '../lib/config.js'
+import { build, install } from '../index.js'
 
 const args = arg({
   '--version': Boolean,
