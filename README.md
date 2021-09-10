@@ -68,7 +68,7 @@ add this to your `package.json`,
   "scripts": {
     "postinstall": "blobpack install"
   },
-  "benthos": {
+  "blobpack": {
     "name": "benthos-lambda",
     "version": "3.54.1",
     "platform": "linux_amd64",
@@ -104,7 +104,7 @@ boring:
     include: []
 ```
 
-First, add the `artifacts` section to the `benthos` config.
+First, add the `artifacts` section to the `blobpack` config.
 This will generate a new artifact to `dist/boring.zip` which uses
 `config/boring.yaml` and intelligently merges resources in both
 `resources/outputs.yaml` and `node_modules/@my-org/blobd/resources/logger.yaml`.
@@ -114,7 +114,7 @@ If two files have the same key, the last one wins._
 
 ```json
 {
-  "benthos": {
+  "blobpack": {
     "artifacts": [
       {
         "name": "boring",
@@ -133,7 +133,7 @@ you can use this shorthand,
 
 ```json
 {
-  "benthos": {
+  "blobpack": {
     "artifacts": [
       "boring"
     ]
@@ -146,7 +146,7 @@ you can use the `include` property,
 
 ```json
 {
-  "benthos": {
+  "blobpack": {
     "include": {
       "resources": ["logger"]
     },

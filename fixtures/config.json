@@ -1,5 +1,5 @@
 {
-  "benthos": {
+  "blobpack": {
     "name": "benthos-lambda",
     "version": "3.54.1",
     "platform": "linux_amd64",
