@@ -159,33 +159,26 @@ you can use the `include` property,
 
 ### CLI
 
-The `blobpack` command supports passing options:
-
-```
-$ blobpack --version
-$ blobpack version
 ```
 
-```
-$ blobpack install \
-  --config-path ./package.json \
-  --tmp-root ./tmp
-```
+  Usage: blobpack [command] [options]
 
-```
-$ blobpack \
-  --config-path ./package.json \
-  --tmp-root ./tmp \
-  --config-root ./config \
-  --resources-root ./ \
-  --dist-root ./dist
 
-$ blobpack build \
-  --config-path ./package.json \
-  --tmp-root ./tmp \
-  --config-root ./config \
-  --resources-root ./ \
-  --dist-root ./dist
+  Commands:
+
+    install        Download Benthos .zip
+    build          Build .zip artifacts
+    help           Display help
+
+  Options:
+
+    --version         Output the version number
+    --config-path     Path to the JSON file containing the blobpack config
+    --tmp-root        Path to tmp working directory
+    --config-root     Path to the directory containing the artifact configs
+    --resources-root  Path to the directory all resources are relative to
+    --dist-root       Path to the directory to output artifacts
+
 ```
 
 ## Development and Testing

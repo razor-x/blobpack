@@ -40,3 +40,28 @@ if (args._[0] === 'build' || args._[0] == null) {
     distRoot: args['--dist-root']
   })
 }
+
+const docs = `
+  Usage: blobpack [command] [options]
+
+
+  Commands:
+
+    install        Download Benthos .zip
+    build          Build .zip artifacts
+    help           Display help
+
+  Options:
+
+    --version         Output the version number
+    --config-path     Path to the JSON file containing the blobpack config
+    --tmp-root        Path to tmp working directory
+    --config-root     Output the version number
+    --resources-root  Output the version number
+    --dist-root       Output the version number
+`
+
+if (args._[0] === 'help') {
+  // eslint-disable-next-line no-console
+  console.log(docs)
+}
