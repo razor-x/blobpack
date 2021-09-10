@@ -56,10 +56,10 @@ const docs = `
 
     --version         Output the version number
     --config-path     Path to the JSON file containing the blobpack config
-    --tmp-root        Path to tmp working directory
-    --config-root     Output the version number
-    --resources-root  Output the version number
-    --dist-root       Output the version number
+    --tmp-root        Path to a temporary working directory
+    --config-root     Path to the directory containing the artifact configs
+    --resources-root  Path to the directory all resources are relative to
+    --dist-root       Path to the directory to output artifacts
 `
 
 if (args._[0] === 'help') {

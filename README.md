@@ -174,7 +174,7 @@ you can use the `include` property,
 
     --version         Output the version number
     --config-path     Path to the JSON file containing the blobpack config
-    --tmp-root        Path to tmp working directory
+    --tmp-root        Path to a temporary working directory
     --config-root     Path to the directory containing the artifact configs
     --resources-root  Path to the directory all resources are relative to
     --dist-root       Path to the directory to output artifacts
