@@ -1,6 +1,11 @@
 {
   "name": "Node.js",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "14"
+    }
+  },
   "extensions": [
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
