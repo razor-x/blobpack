@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Show CLI help with `blobpack help`.
 - Show CLI version with `blobpack version`.
 
+### Changed
+
+- Default config key is now `blobpack`.
+  The original `benthos` key is still supported.
+
 ## 1.1.0 / 2021-09-09
 
 ### Added
