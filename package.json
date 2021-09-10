@@ -33,6 +33,7 @@
   "scripts": {
     "test": "nyc ava",
     "pretest": "node index.js",
+    "posttest": "node ./bin/blobpack.js version",
     "test:update": "ava --update-snapshots",
     "test:watch": "ava --watch",
     "test:debug": "ava debug --break",
