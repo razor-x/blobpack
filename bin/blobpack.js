@@ -50,6 +50,7 @@ const docs = `
     install        Download Benthos .zip
     build          Build .zip artifacts
     help           Display help
+    version        Output the version number
 
   Options:
 
