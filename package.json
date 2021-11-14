@@ -22,7 +22,7 @@
     "email": "razorx@evansosenko.com"
   },
   "files": [
-    "yarn.lock",
+    "package-lock.json",
     "index.js",
     "lib",
     "data",
@@ -53,7 +53,8 @@
     "report": "nyc report"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=12.13.0",
+    "npm": ">= 8.1.0"
   },
   "dependencies": {},
   "devDependencies": {
