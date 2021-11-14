@@ -38,8 +38,6 @@ jobs:
           scope: '@${{ github.repository_owner }}'
       - name: Install dependencies
         run: npm ci
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Format
         run: npm run format
       - name: Commit
