@@ -18,13 +18,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          node-version: ${{ matrix.node }}
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
+          node_version: ${{ matrix.node }}
       - name: Test
         run: npm test
   lint:
@@ -38,13 +35,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          node-version: ${{ matrix.node }}
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
+          node_version: ${{ matrix.node }}
       - name: Lint
         run: npm run lint
   build:
@@ -58,12 +52,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          node-version: ${{ matrix.node }}
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
+          node_version: ${{ matrix.node }}
       - name: Build
         run: npm run build

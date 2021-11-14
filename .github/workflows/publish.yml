@@ -12,12 +12,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          node-version: '12'
-          cache: npm
-          registry-url: https://registry.npmjs.org
+          node_version: '12'
+          registry_url: https://registry.npmjs.org
       - name: Check version
         id: version
         run: |
@@ -26,8 +25,6 @@ jobs:
           echo "::set-output name=published::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Install dependencies
-        run: npm ci
       - name: Build
         run: npn run build
       - name: Publish ${{ steps.version.outputs.name }}@${{ steps.version.outputs.current }}
@@ -40,12 +37,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          node-version: '12'
-          cache: npm
-          registry-url: https://npm.pkg.github.com
+          node_version: '12'
+          registry_url: https://npm.pkg.github.com
       - name: Check version
         id: version
         run: |
@@ -54,8 +50,6 @@ jobs:
           echo "::set-output name=published::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install dependencies
-        run: npm ci
       - name: Build
         run: npm run build
       - name: Publish ${{ steps.version.outputs.name }}@${{ steps.version.outputs.current }}
