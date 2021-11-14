@@ -11,6 +11,6 @@
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode"
   ],
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": "npm install",
   "remoteUser": "node"
 }
