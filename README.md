@@ -12,7 +12,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 ### Features
 
 - [Node.js]'s [npm] package structure.
-- Fast, reliable, and secure dependency management with [Yarn].
+- Package management with [npm].
 - Next generation JavaScript with [Babel].
 - Examples with configurable options and arguments powered by [examplr].
 - Linting with the [JavaScript Standard Style] using [ESLint].
@@ -35,7 +35,6 @@ Bootstrap a new JavaScript module in five minutes or less.
 [Node.js]: https://nodejs.org/
 [Prettier]: https://prettier.io/
 [Shields.io]: https://shields.io/
-[Yarn]: https://yarnpkg.com/
 [examplr]: https://github.com/meltwater/node-examplr
 [npm]: https://www.npmjs.com/
 [nyc]: https://github.com/istanbuljs/nyc
