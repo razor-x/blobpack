@@ -27,19 +27,19 @@ Override any option with the corresponding environment variable:
 List all runnable examples with
 
 ```
-$ yarn run example
+$ npm run example
 ```
 
 Run provided examples with, e.g.,
 
 ```
-$ yarn run example todo
+$ npm run example todo
 ```
 
 Pass arguments to examples with
 
 ```
-$ yarn run example todo false
+$ npm run example todo false
 ```
 
 #### Debugging examples
@@ -47,7 +47,7 @@ $ yarn run example todo false
 Debug examples with, e.g.,
 
 ```
-$ yarn run example:inspect todo
+$ npm run example:inspect todo
 ```
 
 For examples which run a single process and then exit,
