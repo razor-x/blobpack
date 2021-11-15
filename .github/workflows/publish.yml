@@ -17,7 +17,7 @@ jobs:
         with:
           node_version: '12'
       - name: Build
-        run: npn run build
+        run: npm run build
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
         with:
