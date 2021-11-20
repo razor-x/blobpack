@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-20.04
+    timeout-minutes: 30
     strategy:
       matrix:
         node:
@@ -26,6 +27,7 @@ jobs:
         run: npm test
   lint:
     runs-on: ubuntu-20.04
+    timeout-minutes: 30
     strategy:
       matrix:
         node:
@@ -43,6 +45,7 @@ jobs:
         run: npm run lint
   build:
     runs-on: ubuntu-20.04
+    timeout-minutes: 30
     strategy:
       matrix:
         node:
