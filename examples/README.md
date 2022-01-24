@@ -25,19 +25,19 @@ Override any option with the corresponding environment variable:
 List all runnable examples with
 
 ```
-$ yarn run example
+$ npm run example
 ```
 
 Run provided examples with, e.g.,
 
 ```
-$ yarn run example install
+$ npm run example install
 ```
 
 Pass arguments to examples with
 
 ```
-$ yarn run example install package.json
+$ npm run example install package.json
 ```
 
 #### Debugging examples
@@ -45,7 +45,7 @@ $ yarn run example install package.json
 Debug examples with, e.g.,
 
 ```
-$ yarn run example:inspect install
+$ npm run example:inspect install
 ```
 
 For examples which run a single process and then exit,

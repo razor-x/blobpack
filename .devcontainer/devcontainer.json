@@ -1,11 +1,17 @@
 {
   "name": "Node.js",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "16"
+    }
+  },
   "extensions": [
+    "ms-vsliveshare.vsliveshare",
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode"
   ],
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": "npm install",
   "remoteUser": "node"
 }

@@ -9,46 +9,20 @@ on:
 jobs:
   npm:
     runs-on: ubuntu-20.04
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          node-version: '14'
-          registry-url: https://registry.npmjs.org
-      - name: Check version
-        id: version
-        run: |
-          echo "::set-output name=name::$(jq -r '.name' package.json)"
-          echo "::set-output name=current::$(jq -r '.version' package.json)"
-          echo "::set-output name=published::$(npm view $(jq -r '.name' package.json)@$(jq -r '.version' package.json) version)"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Get yarn cache directory
-        id: yarn-cache-dir
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Yarn cache
-        uses: actions/cache@v2
+          node_version: '14'
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
         with:
-          path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Node modules cache
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
-      - name: Publish ${{ steps.version.outputs.name }}@${{ steps.version.outputs.current }}
-        if: ${{ endsWith(github.ref, format('v{0}', steps.version.outputs.published)) == false }}
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          access: public
+          token: ${{ secrets.NPM_TOKEN }}
+
   docs:
     runs-on: ubuntu-20.04
     steps:
@@ -78,35 +52,16 @@ jobs:
           git-committer-email: ${{ secrets.GIT_USER_EMAIL }}
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          node-version: '14'
-      - name: Get yarn cache directory
-        id: yarn-cache-dir
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Yarn cache
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Node modules cache
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
+          node_version: '14'
       - name: Get version
         id: version
         run: |
           echo "::set-output name=current::$(jq -r '.version' package.json)"
       - name: Documentation
-        run: yarn run docs:build
+        run: npm run docs:build
       - name: Publish ${{ steps.version.outputs.current }}
         uses: peaceiris/actions-gh-pages@v3
         with:
