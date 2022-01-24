@@ -67,7 +67,7 @@
     "@babel/core": "^7.14.6",
     "@babel/eslint-parser": "^7.15.4",
     "@meltwater/examplr": "^6.0.0",
-    "ava": "^3.3.0",
+    "ava": "^4.0.1",
     "del": "^6.0.0",
     "documentation": "^13.2.5",
     "eslint": "^7.4.0",
