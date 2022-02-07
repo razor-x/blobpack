@@ -18,7 +18,7 @@ Bootstrap a new JavaScript module in five minutes or less.
 - Linting with the [JavaScript Standard Style] using [ESLint].
 - [Prettier] code.
 - Futuristic debuggable unit testing with [AVA].
-- Code coverage reporting with [Istanbul] and [nyc].
+- Code coverage reporting with [Istanbul] and [c8].
 - Continuous testing and package publishing with [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
@@ -35,9 +35,9 @@ Bootstrap a new JavaScript module in five minutes or less.
 [Node.js]: https://nodejs.org/
 [Prettier]: https://prettier.io/
 [Shields.io]: https://shields.io/
+[c8]: https://github.com/bcoe/c8
 [examplr]: https://github.com/meltwater/node-examplr
 [npm]: https://www.npmjs.com/
-[nyc]: https://github.com/istanbuljs/nyc
 
 ### Bootstrapping a new project
 
