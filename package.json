@@ -30,7 +30,7 @@
     "docs"
   ],
   "scripts": {
-    "test": "nyc ava",
+    "test": "c8 ava",
     "pretest": "node index.js",
     "test:update": "ava --update-snapshots",
     "test:watch": "ava --watch",
@@ -50,7 +50,7 @@
     "format": "npm-run-all --parallel format:*",
     "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
-    "report": "nyc report"
+    "report": "c8 report"
   },
   "engines": {
     "node": ">=12.13.0",
@@ -64,6 +64,7 @@
     "@meltwater/examplr": "^6.0.0",
     "ava": "^4.0.1",
     "babel-plugin-add-import-extension": "^1.4.3",
+    "c8": "^7.11.0",
     "del-cli": "^4.0.1",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^8.3.0",
@@ -72,7 +73,6 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^5.1.0",
     "npm-run-all": "^4.1.2",
-    "nyc": "^15.0.0",
     "prettier": "^2.3.0"
   }
 }
