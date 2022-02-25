@@ -61,7 +61,7 @@
     "@babel/core": "^7.0.1",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@meltwater/examplr": "^6.0.0",
+    "@meltwater/examplr": "^7.0.0",
     "ava": "^4.0.1",
     "babel-plugin-add-import-extension": "^1.4.3",
     "c8": "^7.11.0",
