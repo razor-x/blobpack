@@ -13,7 +13,6 @@ Bootstrap a new JavaScript module in five minutes or less.
 
 - [Node.js]'s [npm] package structure.
 - Package management with [npm].
-- Next generation JavaScript with [Babel].
 - Examples with configurable options and arguments powered by [examplr].
 - Linting with the [JavaScript Standard Style] using [ESLint].
 - [Prettier] code.
@@ -25,7 +24,6 @@ Bootstrap a new JavaScript module in five minutes or less.
 - Badges from [Shields.io].
 
 [AVA]: https://github.com/avajs/ava
-[Babel]: https://babeljs.io/
 [ESLint]: https://eslint.org/
 [EditorConfig]: https://editorconfig.org/
 [GitHub Actions]: https://github.com/features/actions

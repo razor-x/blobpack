@@ -1,3 +1,3 @@
 export default () => ({
-  files: ['**/*.spec.js', '!dist/**/*', '!package/**/*']
+  files: ['**/*.spec.js', '!package/**/*']
 })

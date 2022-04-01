@@ -57,7 +57,7 @@ makenew () {
   read -p '> GitHub user or organization name (my-user): ' mk_user
   read -p '> GitHub repository name (my-repo): ' mk_repo
 
-  sed_delete README.md '10,101d'
+  sed_delete README.md '10,99d'
   sed_insert README.md '10i' 'TODO'
 
   find_replace "s/^  \"version\": \".*\"/  \"version\": \"0.0.0\"/g"

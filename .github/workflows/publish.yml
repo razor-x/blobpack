@@ -15,10 +15,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup
         uses: ./.github/actions/setup
-        with:
-          node_version: '12'
-      - name: Build
-        run: npm run build
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
         with:
@@ -32,10 +28,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup
         uses: ./.github/actions/setup
-        with:
-          node_version: '12'
-      - name: Build
-        run: npm run build
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
         with:
