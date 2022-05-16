@@ -31,14 +31,14 @@
     "docs"
   ],
   "scripts": {
-    "test": "nyc ava",
+    "test": "c8 ava",
     "pretest": "node index.js",
     "posttest": "node ./bin/blobpack.js version",
     "test:update": "ava --update-snapshots",
     "test:watch": "ava --watch",
     "test:debug": "ava debug --break",
     "lint": "npm-run-all --parallel lint:*",
-    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
+    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|cjs|mjs|json|yml|yaml|graphql)'",
     "lint:js": "eslint --ignore-path .gitignore --ext .js .",
     "lint:docs": "documentation lint 'lib/**/*.doc.js'",
     "preversion": "npm-run-all --parallel lint test",
@@ -46,11 +46,11 @@
     "example": "node examples",
     "example:inspect": "node --inspect examples",
     "format": "npm-run-all --parallel format:*",
-    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
+    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|cjs|mjs|json|yml|yaml|graphql)'",
     "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
     "docs": "documentation serve --watch --github 'lib/**/*.doc.js'",
     "docs:build": "documentation build --format html --github --output .docs 'lib/**/*.doc.js'",
-    "report": "nyc report"
+    "report": "c8 report"
   },
   "engines": {
     "node": ">=14.15.0",
@@ -64,20 +64,18 @@
     "mkdirp": "^1.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/eslint-parser": "^7.15.4",
-    "@meltwater/examplr": "^6.0.0",
+    "@meltwater/examplr": "^7.0.0",
     "ava": "^4.0.1",
+    "c8": "^7.11.0",
     "del": "^6.0.0",
     "documentation": "^13.2.5",
-    "eslint": "^7.4.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "npm-run-all": "^4.1.2",
-    "nyc": "^15.0.0",
     "prettier": "^2.3.0"
   }
 }

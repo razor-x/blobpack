@@ -1,10 +1,6 @@
 {
   "root": true,
   "extends": ["standard", "prettier"],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "requireConfigFile": false
-  },
   "rules": {
     "valid-jsdoc": "error",
     "no-console": "warn",
