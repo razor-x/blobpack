@@ -1,9 +1,9 @@
 {
   "blobpack": {
     "name": "benthos-lambda",
-    "version": "3.54.1",
+    "version": "4.1.0",
     "platform": "linux_amd64",
-    "src": "https://github.com/jeffail/benthos/releases/download",
+    "src": "https://github.com/benthosdev/benthos/releases/download",
     "include": {
       "resources": ["blob"]
     },
