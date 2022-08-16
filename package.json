@@ -1,6 +1,6 @@
 {
   "name": "@makenew/jsmodule",
-  "version": "8.2.1",
+  "version": "8.3.0",
   "description": "Package skeleton for a JavaScript module.",
   "type": "module",
   "main": "index.js",
