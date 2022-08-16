@@ -33,16 +33,13 @@
     "test:update": "ava --update-snapshots",
     "test:watch": "ava --watch",
     "test:debug": "ava debug --break",
-    "lint": "npm-run-all --parallel lint:*",
-    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|cjs|mjs|json|yml|yaml|graphql)'",
-    "lint:js": "eslint --ignore-path .gitignore --ext .js,.cjs,.mjs .",
-    "preversion": "npm-run-all --parallel lint test",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.cjs,.mjs .",
+    "prelint": "prettier --check --ignore-path .gitignore '**/*.(js|cjs|mjs|json|yml|yaml|graphql)'",
     "postversion": "git push --follow-tags",
     "example": "node examples",
     "example:inspect": "node --inspect examples",
-    "format": "npm-run-all --parallel format:*",
+    "format": "eslint --ignore-path .gitignore --fix --ext .js,.cjs,.mjs .",
     "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|cjs|mjs|json|yml|yaml|graphql)'",
-    "format:js": "eslint --ignore-path .gitignore --fix --ext .js,.cjs,.mjs .",
     "report": "c8 report"
   },
   "engines": {
@@ -59,7 +56,6 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "npm-run-all": "^4.1.2",
     "prettier": "^2.3.0"
   }
 }
