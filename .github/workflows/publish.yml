@@ -8,7 +8,7 @@ on:
 
 jobs:
   npm:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
@@ -21,7 +21,7 @@ jobs:
           access: public
           token: ${{ secrets.NPM_TOKEN }}
   github:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
