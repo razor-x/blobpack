@@ -43,7 +43,6 @@ Add this as a dependency to your project using [npm] with
 ```
 $ npm install --save-dev blobpack
 ```
-```
 
 [npm]: https://www.npmjs.com/
 
