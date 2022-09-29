@@ -21,7 +21,6 @@
     "email": "razorx@evansosenko.com"
   },
   "files": [
-    "package-lock.json",
     "index.js",
     "lib",
     "data",
