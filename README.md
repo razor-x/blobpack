@@ -177,8 +177,7 @@ $ npm install
 Use the [`npm version`][npm-version] command to release a new version.
 This will push a new git tag which will trigger a GitHub action.
 
-Publishing may be triggered using on the web
-using a [workflow_dispatch on GitHub Actions].
+Publishing may be triggered using a [workflow_dispatch on GitHub Actions].
 
 [npm-version]: https://docs.npmjs.com/cli/version
 [workflow_dispatch on GitHub Actions]: https://github.com/makenew/jsmodule/actions?query=workflow%3Aversion
