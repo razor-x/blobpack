@@ -63,9 +63,9 @@ add this to your `package.json`,
   },
   "blobpack": {
     "name": "benthos-lambda",
-    "version": "3.54.1",
+    "version": "4.10.0",
     "platform": "linux_amd64",
-    "src": "https://github.com/jeffail/benthos/releases/download"
+    "src": "https://github.com/benthosdev/benthos/releases/download"
   }
 }
 ```
