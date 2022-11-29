@@ -243,8 +243,7 @@ $ npm install
 Use the [`npm version`][npm-version] command to release a new version.
 This will push a new git tag which will trigger a GitHub action.
 
-Publishing may be triggered using on the web
-using a [workflow_dispatch on GitHub Actions].
+Publishing may be triggered using a [workflow_dispatch on GitHub Actions].
 
 [npm-version]: https://docs.npmjs.com/cli/version
 [workflow_dispatch on GitHub Actions]: https://github.com/razor-x/blobpack/actions?query=workflow%3Aversion
@@ -256,7 +255,15 @@ _GitHub Actions should already be configured: this section is for reference only
 The following repository secrets must be set on [GitHub Actions]:
 
 - `NPM_TOKEN`: npm token for installing and publishing packages.
-- `GH_USER`: The GitHub user's username.
+
+These must be set manually.
+
+### Secrets for Optional GitHub Actions
+
+The version and format GitHub actions
+require a user with write access to the repository.
+Set these additional secrets to enable the action:
+
 - `GH_TOKEN`: A personal access token for the user.
 - `GIT_USER_NAME`: The GitHub user's real name.
 - `GIT_USER_EMAIL`: The GitHub user's email.
