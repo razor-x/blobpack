@@ -42,8 +42,7 @@ jobs:
         uses: ./.github/actions/setup
       - name: Get version
         id: version
-        run: |
-          echo "::set-output name=current::$(jq -r '.version' package.json)"
+        run: echo "{current}=$(jq -r '.version' package.json)" >> $GITHUB_OUTPUT
       - name: Documentation
         run: npm run docs:build
       - name: Publish ${{ steps.version.outputs.current }}
