@@ -2,13 +2,10 @@
 name: format
 
 on:
-  pull_request:
-    branches:
+  push:
+    branches-ignore:
       - master
   workflow_dispatch: {}
-  repository_dispatch:
-    types:
-      - format
 
 jobs:
   fix:
