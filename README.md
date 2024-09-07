@@ -127,9 +127,7 @@ you can use this shorthand,
 ```json
 {
   "blobpack": {
-    "artifacts": [
-      "boring"
-    ]
+    "artifacts": ["boring"]
   }
 }
 ```
@@ -143,9 +141,23 @@ you can use the `include` property,
     "include": {
       "resources": ["logger"]
     },
-    "artifacts": [
-      "boring"
-    ]
+    "artifacts": ["boring"]
+  }
+}
+```
+
+#### Bento support
+
+If you need Serverless Bento, you can change `src` and `checksumPrefix` properties:
+
+```json
+{
+  "blobpack": {
+    "name": "benthos-lambda",
+    "version": "4.10.0",
+    "platform": "linux_amd64",
+    "checksumPrefix": "bento",
+    "src": "https://github.com/warpstreamlabs/bento/releases/download"
   }
 }
 ```
