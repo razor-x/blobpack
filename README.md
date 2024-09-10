@@ -148,19 +148,21 @@ you can use the `include` property,
 
 #### Bento support
 
-If you need Serverless Bento, you can change `src` and `checksumPrefix` properties:
+If you need Serverless [Bento], set the `src` and `checksumPrefix` properties,
 
 ```json
 {
   "blobpack": {
     "name": "benthos-lambda",
-    "version": "4.10.0",
+    "version": "1.2.0",
     "platform": "linux_amd64",
     "checksumPrefix": "bento",
     "src": "https://github.com/warpstreamlabs/bento/releases/download"
   }
 }
 ```
+
+[Bento]: https://warpstreamlabs.github.io/bento/
 
 ### CLI
 
