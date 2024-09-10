@@ -83,7 +83,7 @@ First, add a new build step and ensure it runs before deployment,
 ```
 
 Assuming you want to deploy the below Serverless function,
-you will need to generate the `boring.zip` artifact to deploy.
+you will need to tell blobpack to generate the `boring.zip` artifact.
 
 _Tip: you can reuse the same artifact for multiple functions._
 
