@@ -1,24 +1,25 @@
 ---
-name: format
+name: Format
 
 on:
   push:
     branches-ignore:
-      - master
+      - main
   workflow_dispatch: {}
 
 jobs:
-  fix:
+  commit:
+    name: Format code
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_TOKEN }}
       - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v5
+        uses: crazy-max/ghaction-import-gpg@v6
         with:
           git_user_signingkey: true
           git_commit_gpgsign: true
@@ -31,9 +32,10 @@ jobs:
       - name: Format
         run: npm run format
       - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
+        if: always()
         with:
-          commit_message: Run format
+          commit_message: Format code
           commit_user_name: ${{ secrets.GIT_USER_NAME }}
           commit_user_email: ${{ secrets.GIT_USER_EMAIL }}
           commit_author: ${{ secrets.GIT_USER_NAME }} <${{ secrets.GIT_USER_EMAIL }}>
